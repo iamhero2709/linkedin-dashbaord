@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help and Support</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.help-container {
+  
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 11px 19px 21px rgba(0, 0, 0, 0.1);
+    width: 600px;
+    max-width: 100%;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 300;
+    border: 1px solid #EEEDEB;
+    border-radius: 12px;
+    padding: 12px;
+    font-size: 32px;
+    color:white;
+    background: rgb(16,53,235);
+    background: linear-gradient(90deg, rgba(16,53,235,1) 0%, rgba(185,84,186,1) 65%);
+}
+
+.faq-section, .contact-form-section {
+    margin-bottom: 20px;
+   
+}
+
+.faq-item {
+    margin-bottom: 15px;
+    display: flex;
+}
+
+.faq-item h4 {
+    margin: 0;
+    cursor: pointer;
+    column-rule: #333;
+    font-weight: 300;
+}
+
+.faq-item p {
+    margin: 5px 0 0 0;
+    display: none;
+    color: grey;
+}
+
+.input-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.input-group input, .input-group textarea {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border-color: #EEEDEB;
+    border-radius: 12px;
+}
+
+button {
+    color:white;
+    background: rgb(16,53,235);
+    background: linear-gradient(90deg, rgba(16,53,235,1) 0%, rgba(185,84,186,1) 65%);
+
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background: rgb(16,53,235);
+    transform: translateY(-1px);
+    transition:0.1 linear;
+}
+
+.form-message {
+    color: red;
+    margin-top: 10px;
+    display: none;
+}
+
+    </style>
+    <div class="help-container">
+        <h2>Help and Support</h2>
+        <div class="faq-section">
+            <h3>Frequently Asked Questions</h3>
+            <div class="faq-item">
+                <h4>How do I reset my password?</h4>
+                <p>To reset your password, go to the login page and click on "Forgot Password". Follow the instructions to reset your password.</p>
+            </div>
+            <div class="faq-item">
+                <h4>How do I contact support?</h4>
+                <p>You can contact support by emailing support@example.com or by calling (123) 456-7890.</p>
+            </div>
+            <div class="faq-item">
+                <h4>Where can I find the user guide?</h4>
+                <p>The user guide can be found in the "Resources" section of the website or directly through this <a href="#">link</a>.</p>
+            </div>
+        </div>
+        <div class="contact-form-section">
+            <h3 style="margin-left: 40%;">Contact Us</h3>
+            <form id="contactForm">
+                <div class="input-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="input-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="input-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <button type="submit">Submit</button>
+                <p id="formMessage" class="form-message"></p>
+            </form>
+        </div>
+    </div>
+   <script>
+    document.addEventListener('DOMContentLoaded', () => {
+    const faqItems = document.querySelectorAll('.faq-item h4');
+    faqItems.forEach(item => {
+        item.addEventListener('click', () => {
+            const content = item.nextElementSibling;
+            content.style.display = content.style.display === 'block' ? 'none' : 'block';
+        });
+    });
+
+    document.getElementById('contactForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const message = document.getElementById('message').value;
+        const formMessage = document.getElementById('formMessage');
+
+        if (name && email && message) {
+            // Simulate a successful form submission
+            formMessage.textContent = 'Your message has been sent successfully!';
+            formMessage.style.color = 'green';
+            formMessage.style.display = 'block';
+
+            // Clear form fields
+            document.getElementById('contactForm').reset();
+        } else {
+            formMessage.textContent = 'Please fill in all the fields.';
+            formMessage.style.display = 'block';
+        }
+    });
+});
+
+   </script>
+</body>
+</html>

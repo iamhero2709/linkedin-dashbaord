@@ -1,0 +1,325 @@
+
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
+}
+.grid-container{
+display: grid;
+grid-template-columns: 260px 1fr 1fr 1fr;
+grid-template-rows: 0.2fr 3fr;
+grid-template-areas: "sidebar header header header"
+ "sidebar main main main";
+height:100vh;
+
+}
+.header{
+grid-area: header;
+height: 120px;
+background-color: #fff;
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 0 30px 0 30px;
+box-shadow: 0 6px 6px -8px rgba(0,0,0.5);
+}
+
+
+/* header */
+.header input {
+  
+    font-size: 22px;
+    width: 40vw;
+    padding: 22px 400px 16px 40px; /* Add padding-left for the icon */
+    color: grey;
+    border-radius: 12px;
+    border: 1px solid #EEEDEB;
+    box-sizing: border-box; /* Ensure padding is included in the element's total width and height */
+}
+
+.search-container {
+    position: relative;
+    display: inline-block;
+}
+
+.search-container input {
+    width: 100%;
+}
+
+.search-container i {
+    position: absolute;
+    top: 50%;
+    left: 12px; /* Position the icon inside the input */
+    transform: translateY(-50%);
+    color:royalblue;
+    cursor: pointer;
+    font-size: 22px;
+}
+.search-container input:hover, .search-container input:focus {
+    border-color: #007BFF; /* Change border color on hover and focus */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Add shadow effect */
+    outline: none; /* Remove default outline */
+}
+
+.search-container i:hover {
+    color: #007BFF; /* Change icon color on hover */
+}
+
+ .header #btn-lead{
+    color: white;
+    border-radius: 12px;
+    padding: 12px 28px 12px;
+    background: rgb(16,53,235);
+    background: linear-gradient(90deg, rgba(16,53,235,1) 0%, rgba(185,84,186,1) 65%);
+ }
+ .header #user-icon{
+    border-radius: 6px;
+    padding: 8px 8px 4px;
+    background: rgb(16,53,235);
+    background: linear-gradient(90deg, rgba(16,53,235,1) 0%, rgba(185,84,186,1) 65%);
+ }
+.icon{
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+    padding: 8px 8px ;
+    cursor: pointer;
+}
+.icon:hover{
+    background: rgb(16,53,235);
+    background: linear-gradient(90deg, rgba(16,53,235,1) 0%, rgba(185,84,186,1) 65%);
+color: #fff;
+border-radius: 6px;
+}
+ #btn-lead:hover{
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(-3px);
+    transition: 0.1s linear;
+}
+
+/* header part end  */
+/*sidepart start */
+#sidebar{
+    grid-area: sidebar;
+    height:100%;
+    background-color: #fff;
+  overflow-y: auto;
+  transition:all 0.5s;
+  -webkit-animation: all 0.5s;
+  box-shadow: 0 6px 7px -3px rgba(0,0,0.35);
+}
+.main-container{
+grid-area: main;
+background-color: #faf7f7;
+padding: 20px 20px ;
+color: black;
+box-shadow: 0 6px 7px -3px rgba(0,0,0.35);
+}
+
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+
+#sidebar h1{
+    padding-top: 18px;
+    color: rgb(82, 82, 207);
+   font-size: 2rem; 
+}
+#sidebar h2{
+    color: grey;
+    font-size:1.2rem;
+    font-weight: 500;
+}
+.dash-prime{
+    background-color: aqua;
+    border-radius: 4px 4px 4px;
+}
+.sidebar-nav{
+    margin-top: 102px;
+    padding: 10px 16px 16px;
+}
+.sidebar-nav{
+    height: 20px;
+}
+.sidebar-nav h2{
+
+
+}
+.sidebar-nav h2:nth-child(1){
+   border-radius: 6px 6px 6px;
+    background: rgb(16,53,235);
+    background: linear-gradient(90deg, rgba(16,53,235,1) 0%, rgba(185,84,186,1) 65%);
+    
+}
+.sidebar-icon{
+   
+    margin-top: 300px;
+    padding: 10px 16px 16px;
+}
+.sidebar-icon h2{
+    padding: 10px 12px 10px;
+}
+
+
+/* main 1 */
+.main-conatiner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#main-1{
+    height: 100%;
+    width: 50vw;
+    padding:53px 28px 20px;
+    ;
+}
+
+/* main 1 styling*/
+#main-activity{
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+gap: 60px;
+margin:40px 20px 20px;
+border: 1px solid #EEEDEB;
+border-radius: 12px;
+padding:20px 20px 20px;
+
+}
+#linkedin-activty{
+    background: rgb(16,53,235);
+    background: linear-gradient(90deg, rgba(16,53,235,1) 0%, rgba(185,84,186,1) 65%);
+    border-radius: 12px;
+    padding:22px 46px ;
+    color:white;
+    display: flex;
+    flex-direction: row;
+    
+}
+#linkedin-activty h1{
+    font-size: 26px; 
+font-weight: 400;
+}
+#follow-up{
+    border: 2px solid #EEEDEB;
+    border-radius: 12px;
+    padding:22px 46px ;
+    display: flex;
+    gap: 20px;
+}
+#follow-up h3{
+color: grey;
+font-weight: 400;
+font-size: 32px;
+}
+#top-interacted-lead{
+    display: flex;
+
+gap: 30px;
+margin: 20px 20px 20px;
+    
+}
+#top-posts{
+    width: 60%;
+    padding: 15px 15px 15px;
+    
+}
+#profile-part{
+   height: 100%;
+   width: 100%;
+ 
+   display: flex;
+   flex-direction: row;
+   gap: 40px;
+}
+#profile img{
+    height: 100px;
+    width: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+#top-posts h1{
+    font-size:1.7rem ;
+    padding: 12px 4px;
+    font-weight: 500;
+
+}
+
+#hashatag{
+
+width: 40%;
+
+}
+#hashatag h1{
+    font-size:1.7rem ;
+    padding: 12px 4px;
+    font-weight: 500;
+}
+#hashatag h4{
+    color: grey;
+    font-size:1.7rem ;
+    padding: 12px 4px;
+    font-weight: 500;
+    border-bottom: 1px solid grey;
+}
+#top-post-interact{
+ 
+}
+#post img{
+    height: 60px;
+    width: 8%;
+    border-radius: 50%;
+    
+}
+#post{
+    display: flex;
+    flex-direction: row;
+    gap: 60px;
+    padding: 16px 16px 16px;
+}
+/* main 2 */
+#main-2{
+
+    height: 100%;
+    width: 30vw;
+}
+#hashtag h1{
+    margin-top: 28px;
+    padding: 12px 8px 8px;
+}
+#header-part{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+#header-part p{
+    padding: 12px 8px 8px;
+    color: grey;
+}
+
+
+#main-2-two{
+    padding-top: 80px;
+}
+/* Analytics Section */
+#analytics-section {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 6px 6px -8px rgba(0,0,0,0.5);
+    margin: 20px;
+}

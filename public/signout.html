@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Out Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.signout-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 10px;
+}
+
+button {
+    background: rgb(16,53,235);
+    background: linear-gradient(90deg, rgba(16,53,235,1) 0%, rgba(185,84,186,1) 65%);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color:  rgb(16,53,235);
+}
+
+    </style>
+    <div class="signout-container">
+        <h2>You have successfully signed out</h2>
+        <p>Thank you for using our service.</p>
+        <button id="loginButton">Log Back In</button>
+    </div>
+    <script>
+        document.getElementById('loginButton').addEventListener('click', () => {
+    window.location.href = 'login.html'; // Redirect to the login page
+});
+
+    </script>
+</body>
+</html>
